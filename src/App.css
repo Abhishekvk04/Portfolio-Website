@@ -1,38 +1,213 @@
+
+
 .App {
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MenuButton {
+  margin-left: auto;
+}
+
+.DarkModeSwitch {
+  margin-right: 10px;
+}
+
+.App-photo-container {
   text-align: center;
+  margin: 20px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  transition: transform 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-photo:hover {
+  transform: scale(1.1);
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #6dd5ed, #2193b0);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  font-size: 2rem;
+  margin: 10px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header p {
+  font-size: 1.2rem;
+  margin: 5px 0;
 }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.App-section {
+  padding: 20px;
+}
+
+.App-card {
+  margin: 20px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.App-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-content {
+  text-align: left;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.date {
+  float: right;
+  color: #888888;
+}
+
+.drawer-header {
+  text-align: center;
+  padding: 20px;
+  background: #2193b0;
+  color: white;
+}
+
+.drawer-avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 10px;
+}
+
+.drawer h6 {
+  margin: 5px 0;
+}
+
+.drawer p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.Projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.Project-card {
+  max-width: 300px;
+  margin: 10px;
+}
+
+
+/* Add CSS for the new UI components */
+
+/*.App {
+  font-family: 'Roboto', sans-serif;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MenuButton {
+  margin-left: auto;
+}
+
+.DarkModeSwitch {
+  margin-right: 10px;
+}
+
+.App-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.App-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.App-section {
+  padding: 20px;
+}
+
+.App-card {
+  margin: 20px 0;
+}
+
+.section-content {
+  text-align: left;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.date {
+  float: right;
+}
+
+.Projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.Project-card {
+  max-width: 300px;
+  margin: 10px;
+}*/
