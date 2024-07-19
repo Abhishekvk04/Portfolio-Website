@@ -57,7 +57,7 @@ function App() {
                   <ListItemText primary="Projects" />
                 </ListItem>
               <ListItem>
-                <Button variant="contained" color="primary" href="https://drive.google.com/file/d/1y-lpJPkgEmS2zd1ACyo1Bbyh7OI6pLPO/view?usp=sharing" target="_blank">
+                <Button variant="contained" color="primary" href="https://drive.google.com/file/d/1Y1HxzhSOdSD4h-qkjbwQZ9UtspICCVLH/view?usp=sharing" target="_blank">
                   View Resume
                 </Button>
               </ListItem>
@@ -137,8 +137,9 @@ const getSectionContent = (id) => {
           <p>Bangalore, India, Hybrid</p>
           <p>Jan 2024 – Present</p>
           <ul>
-            <li>Maintained the IEEE RIT-B website with my team.</li>
-            <li>Contributed to the website UI using ReactJS, Tailwind CSS, and NextJS.</li>
+            <li>Led a team in maintaining the IEEE RIT-B website, ensuring seamless user experience and functionality. Contributed
+significantly to the website’s UI by leveraging advanced frameworks like ReactJS, Tailwind CSS, and NextJS, resulting in
+a more intuitive and visually appealing interface.</li>
           </ul>
           <h3>GirlScript Summer of Code</h3>
           <p>Open Source Contributor</p>
@@ -201,11 +202,12 @@ const getSectionContent = (id) => {
         <div className="left-align">
           <div className="honor-award">
             <span className="award-title">Rajyapuraskar Award</span>
-            <span className="award-date">June 2019</span>
+            <span className="award-date"> | June 2019</span>
           </div>
+          
           <div className="honor-award">
             <span className="award-title">INCEF Gold Medal</span>
-            <span className="award-date">May 2019</span>
+            <span className="award-date"> | May 2019</span>
           </div>
         </div>
       );
