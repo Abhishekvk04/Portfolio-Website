@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
-import profilePhoto from './abhi.png';
-import { Drawer, List, ListItem, ListItemText, IconButton, Switch, Button, Card, CardContent, Typography } from '@mui/material';
+import profilePhoto from './Assests/abhi.png';
+import { Drawer, List, ListItem, ListItemText, IconButton, Button, Card, CardContent, Typography, Fab } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Projects from './Projects';
+import Projects from './Components/Projects';
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -26,12 +29,15 @@ function App() {
     { title: 'Education', id: 'education' },
     { title: 'Technical Skills', id: 'technical-skills' },
     { title: 'Experience', id: 'experience' },
-    /*{ title: 'Projects', id: 'projects' },*/
     { title: 'Certifications', id: 'certifications' },
     { title: 'International Membership', id: 'international-membership' },
     { title: 'Honors and Awards', id: 'honors-awards' },
     { title: 'Contact', id: 'contact' },
   ];
+
+  const handleBackToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <Router>
@@ -41,9 +47,19 @@ function App() {
             <IconButton onClick={toggleDrawer(true)} className="MenuButton">
               <MenuIcon style={{ color: darkMode ? 'white' : 'black' }} />
             </IconButton>
-            <Switch checked={darkMode} onChange={toggleDarkMode} color="default" className="DarkModeSwitch" />
+            <IconButton onClick={toggleDarkMode} className="DarkModeSwitch">
+              {darkMode ? <Brightness7Icon style={{ color: 'white' }} /> : <Brightness4Icon style={{ color: 'black' }} />}
+            </IconButton>
           </div>
+
+
+          
           <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+            <div className="drawer-header">
+              
+              <Typography variant="h6">Abhishek V K</Typography>
+              <Typography variant="body">Full Stack Developer</Typography>
+            </div>
             <List>
               {sections.map((section) => (
                 <ListItem button key={section.id} onClick={() => {
@@ -54,36 +70,46 @@ function App() {
                 </ListItem>
               ))}
               <ListItem button component={Link} to="/projects" onClick={() => setDrawerOpen(false)}>
-                  <ListItemText primary="Projects" />
-                </ListItem>
+                <ListItemText primary="Projects" />
+              </ListItem>
               <ListItem>
-                <Button variant="contained" color="primary" href="https://drive.google.com/file/d/1Y1HxzhSOdSD4h-qkjbwQZ9UtspICCVLH/view?usp=sharing" target="_blank">
+                <Button variant="contained" color="primary" href="https://drive.google.com/file/d/1y-lpJPkgEmS2zd1ACyo1Bbyh7OI6pLPO/view?usp=sharing" target="_blank">
                   View Resume
                 </Button>
               </ListItem>
             </List>
           </Drawer>
+
+
+
+
           <img src={profilePhoto} className="App-photo" alt="Profile" />
           <h1>Hey There! This is Abhishek V K</h1>
-          <p>Flutter dev | GenAI | Machine Learning</p>
+          <p>React dev | GenAI | Machine Learning</p>
           <div className="social-icons">
             <IconButton href="https://github.com/Abhishekvk04" target="_blank"><GitHubIcon /></IconButton>
             <IconButton href="https://www.linkedin.com/in/abhishek-v-k-574846248/" target="_blank"><LinkedInIcon /></IconButton>
             <IconButton href="mailto:vkabhishek04@gmail.com"><EmailIcon /></IconButton>
           </div>
+          <Button variant="contained" color="secondary" component={Link} to="/projects">
+            View Projects
+          </Button>
         </header>
         <main>
-            <Routes>
-              <Route path="/" element={
-                sections.map((section) => (
-                  <Section key={section.id} id={section.id} title={section.title}>
-                    {getSectionContent(section.id)}
-                  </Section>
-                ))
-              } />
-              <Route path="/projects" element={<Projects />} />
-            </Routes>
-          </main>
+          <Routes>
+            <Route path="/" element={
+              sections.map((section) => (
+                <Section key={section.id} id={section.id} title={section.title}>
+                  {getSectionContent(section.id)}
+                </Section>
+              ))
+            } />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+          <Fab color="primary" aria-label="back to top" className="back-to-top" onClick={handleBackToTop}>
+            <ArrowUpwardIcon />
+          </Fab>
+        </main>
       </div>
     </Router>
   );
@@ -107,7 +133,7 @@ const Section = ({ id, title, children }) => {
 const getSectionContent = (id) => {
   switch (id) {
     case 'about-me':
-      return <p className="left-align">Hi, I'm Abhishek V K, an aspiring developer with a passion for Flutter, GenAI, and Machine Learning.</p>;
+      return <p className="left-align">Hi, I'm Abhishek V K, Data Science and AI student with a strong foundation in programming, web development, and AI applications. Proven track record in leading projects, enhancing user experience, and contributing to award-winning solutions. Seeking to leverage skills in a challenging role within a dynamic organization.</p>;
     case 'education':
       return (
         <div className="left-align">
@@ -151,31 +177,6 @@ a more intuitive and visually appealing interface.</li>
           </ul>
         </div>
       );
-    /*case 'projects':
-      return (
-        <div className="left-align">
-          <h3>Tax Craft</h3>
-          <p>Python, Jupyter notebook, Langchain, Streamlit, APIs</p>
-          <p>Oct 2023</p>
-          <ul>
-            <li>Used LLM to read PDFs and help users with tax deduction methods.</li>
-          </ul>
-          <h3>Club Fusion</h3>
-          <p>Dart, Flutter</p>
-          <p>Oct 2023</p>
-          <ul>
-            <li>Part of an intra-internship at Ramaiah Institute of Technology.</li>
-            <li>Developed a platform for club recruitment and notifications.</li>
-          </ul>
-          <h3>Green Chips</h3>
-          <p>HTML, CSS, JavaScript, Python</p>
-          <p>Aug 2023</p>
-          <ul>
-            <li>Developed as part of Smart India Hackathon.</li>
-            <li>Provided a solution for E-Waste management to maximize consumer profit.</li>
-          </ul>
-        </div>
-      );*/
     case 'certifications':
       return (
         <div className="left-align">
@@ -201,14 +202,31 @@ a more intuitive and visually appealing interface.</li>
       return (
         <div className="left-align">
           <div className="honor-award">
-            <span className="award-title">Rajyapuraskar Award</span>
+            <span className="award-title">Scout Rajyapuraskar Award</span>
             <span className="award-date"> | June 2019</span>
           </div>
+          <br></br>
+
+          <div className="honor-award">
+            <span className="award-title">INCEF - Indian Science and Engineering Fair: Received silver medal in National level</span>
+            <span className="award-date"> | Jan 2019</span>
+          </div>
+          <br></br>
+
+          <div className="honor-award">
+            <span className="award-title">Hoysala and Keladi Chennamma Award| Jan 2019</span>
+          </div>
+          <br></br>
           
           <div className="honor-award">
-            <span className="award-title">INCEF Gold Medal</span>
-            <span className="award-date"> | May 2019</span>
+            <span className="award-title">Young Scientist Award| Dec 2017</span>
           </div>
+          <br></br>
+
+          <div className="honor-award">
+            <span className="award-title">NCSC - National Children Science Fair : Received A grade for our project| Dec 2017</span>
+          </div>
+         
         </div>
       );
     case 'contact':

@@ -3,6 +3,7 @@
 .App {
   font-family: 'Roboto', sans-serif;
   transition: background-color 0.5s, color 0.5s;
+  text-align: left;
 }
 
 .dark-mode {
@@ -70,12 +71,14 @@
 }
 
 .App-section {
-  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .App-card {
   margin: 20px 0;
   transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
 }
 
 .App-card:hover {
@@ -101,11 +104,15 @@
   padding: 20px;
   background: #2193b0;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .drawer-avatar {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   margin: 0 auto 10px;
 }
 
@@ -130,84 +137,25 @@
   margin: 10px;
 }
 
-
-/* Add CSS for the new UI components */
-
-/*.App {
-  font-family: 'Roboto', sans-serif;
-}
-
-.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
-
-.light-mode {
-  background-color: #ffffff;
-  color: #000000;
-}
-
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.MenuButton {
-  margin-left: auto;
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 1780px;
+  z-index: 1000;
+  align-items: center;
 }
 
-.DarkModeSwitch {
-  margin-right: 10px;
+
+.back-to-top:hover {
+  color: #0b0c0c; /* Change this to a darker shade of your preferred color */
 }
 
-.App-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 20px auto;
-}
 
-.App-header {
-  text-align: center;
-  padding: 20px;
-}
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.App-section {
-  padding: 20px;
-}
-
-.App-card {
-  margin: 20px 0;
-}
-
-.section-content {
-  text-align: left;
-}
-
-.left-align {
-  text-align: left;
-}
-
-.date {
-  float: right;
-}
-
-.Projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.Project-card {
-  max-width: 300px;
-  margin: 10px;
-}*/
