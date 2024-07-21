@@ -73,7 +73,7 @@ function App() {
                 <ListItemText primary="Projects" />
               </ListItem>
               <ListItem>
-                <Button variant="contained" color="primary" href="https://drive.google.com/file/d/1y-lpJPkgEmS2zd1ACyo1Bbyh7OI6pLPO/view?usp=sharing" target="_blank">
+                <Button variant="contained" color="primary" href="https://drive.google.com/file/d/1Y1HxzhSOdSD4h-qkjbwQZ9UtspICCVLH/view?usp=sharing" target="_blank">
                   View Resume
                 </Button>
               </ListItem>
