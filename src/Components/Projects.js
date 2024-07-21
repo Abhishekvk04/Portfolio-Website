@@ -5,6 +5,7 @@ import projectImage1 from '../Assests/abhi.png';
 import projectImage2 from '../Assests/abstract.jpg';
 import projectImage3 from '../Assests/abstract1.jpg';
 import './css/Projects.css'
+import "../App.css"
 const projects = [
   {
     title: 'Tax Craft',
@@ -67,6 +68,7 @@ const projects = [
 
 const Projects = () => {
   return (
+
     <div className="Projects">
       <Typography variant="h2" component="h2" gutterBottom>
         Projects

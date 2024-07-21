@@ -1,5 +1,3 @@
-
-
 .App {
   font-family: 'Roboto', sans-serif;
   transition: background-color 0.5s, color 0.5s;
@@ -16,10 +14,17 @@
   color: #000000;
 }
 
+/* Add dark mode styling for the drawer */
+.dark-mode .drawer-header {
+  background-color: #333333;
+  color: #ffffff;
+}
+
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .MenuButton {
@@ -137,25 +142,110 @@
   margin: 10px;
 }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
 .back-to-top {
   position: fixed;
   bottom: 20px;
-  left: 1780px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
+  display: flex;
   align-items: center;
 }
-
 
 .back-to-top:hover {
   color: #0b0c0c; /* Change this to a darker shade of your preferred color */
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .App-section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 
+@media (max-width: 992px) {
+  .App-header h1 {
+    font-size: 1.8rem;
+  }
 
+  .App-header p {
+    font-size: 1rem;
+  }
+
+  .App-section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .App-photo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .App-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .App-header p {
+    font-size: 0.9rem;
+  }
+
+  .App-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .drawer-header {
+    padding: 15px;
+  }
+
+  .drawer-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .back-to-top {
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .App-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .App-header p {
+    font-size: 0.8rem;
+  }
+
+  .App-section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .drawer-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .Projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Project-card {
+    max-width: 100%;
+  }
+
+  .back-to-top {
+    bottom: 10px;
+  }
+}
