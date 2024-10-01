@@ -210,7 +210,6 @@ function App() {
       case 'about-me':
         return (
           <div className="about-me-section">
-            <h2 className="section-title">About Me</h2>
             <p className="left-align">
               Hi, I'm Abhishek V K, a Data Science and AI student with a strong foundation in programming, web development, and AI applications. Proven track record in leading projects, enhancing user experience, and contributing to award-winning solutions. Seeking to leverage skills in a challenging role within a dynamic organization.
             </p>
@@ -219,7 +218,6 @@ function App() {
       case 'skills-and-experience':
         return (
           <div className="skills-and-experience-section">
-            <h2 className="section-title">Technical Skills & Experience</h2>
             <SkillsAndExperience />
           </div>
         );
