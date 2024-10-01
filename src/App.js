@@ -91,7 +91,7 @@ const SkillsAndExperience = () => {
   ];
 
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} className="grid-wrapper">
       <Grid item xs={12} md={6}>
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -101,47 +101,42 @@ const SkillsAndExperience = () => {
           <Card className="section-card skills-card">
             <CardContent>
               <Typography variant="h5" className="section-title">
-                <span className="title-tag">&lt;</span>
-                Technical Skills
+                <span className="title-tag">&lt;</span> Technical Skills
                 <span className="title-tag">/&gt;</span>
               </Typography>
               <Box className="skills-container">
                 {skills.map((skill, index) => (
-                  <SkillBar 
-                    key={index}
-                    skill={skill.name}
-                    level={skill.level}
-                    color={skill.color}
-                  />
+                  <SkillBar key={index} skill={skill.name} level={skill.level} color={skill.color} />
                 ))}
               </Box>
             </CardContent>
           </Card>
         </motion.div>
       </Grid>
-      <Grid item xs={12} md={6}>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <Card className="section-card experience-card">
-            <CardContent>
-              <Typography variant="h5" className="section-title">
-                <span className="title-tag">&lt;</span>
-                Experience
-                <span className="title-tag">/&gt;</span>
-              </Typography>
-              <div className="experience-container">
-                {experiences.map((exp, index) => (
-                  <ExperienceCard key={index} {...exp} />
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      </Grid>
+
+    <Grid item xs={12} md={6}>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <Card className="section-card experience-card">
+          <CardContent>
+            <Typography variant="h5" className="section-title">
+              <span className="title-tag">&lt;</span> Experience
+              <span className="title-tag">/&gt;</span>
+            </Typography>
+            <div className="experience-container">
+              {experiences.map((exp, index) => (
+                <ExperienceCard key={index} {...exp} />
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </motion.div>
     </Grid>
+  </Grid>
+
   );
 };
 
@@ -209,18 +204,30 @@ function App() {
     { title: 'About Me', id: 'about-me' },
     { title: 'Technical Skills & Experience', id: 'skills-and-experience' },
   ];
-
+  
   const getSectionContent = (id) => {
     switch (id) {
       case 'about-me':
-        return <p className="left-align">Hi, I'm Abhishek V K, a Data Science and AI student with a strong foundation in programming, web development, and AI applications. Proven track record in leading projects, enhancing user experience, and contributing to award-winning solutions. Seeking to leverage skills in a challenging role within a dynamic organization.</p>;
+        return (
+          <div className="about-me-section">
+            <h2 className="section-title">About Me</h2>
+            <p className="left-align">
+              Hi, I'm Abhishek V K, a Data Science and AI student with a strong foundation in programming, web development, and AI applications. Proven track record in leading projects, enhancing user experience, and contributing to award-winning solutions. Seeking to leverage skills in a challenging role within a dynamic organization.
+            </p>
+          </div>
+        );
       case 'skills-and-experience':
-        return <SkillsAndExperience />;
+        return (
+          <div className="skills-and-experience-section">
+            <h2 className="section-title">Technical Skills & Experience</h2>
+            <SkillsAndExperience />
+          </div>
+        );
       default:
         return null;
     }
   };
-
+  
   return (
     <Router>
       <motion.div

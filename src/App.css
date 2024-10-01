@@ -402,3 +402,150 @@ footer {
     margin-bottom: 1rem;
   }
 }
+
+
+.grid-wrapper {
+  background: linear-gradient(to right, #1a2a3a, #0c1620);
+}
+
+.skills-and-experience {
+  background: linear-gradient(to right, #1a2a3a, #0c1620);
+}
+
+.about-me-section {
+  background: linear-gradient(to right, #1a2a3a, #0c1620); 
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow effect */
+}
+
+.skills-and-experience-section {
+  background: linear-gradient(to right, #1a2a3a, #0c1620);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow effect */
+  margin-bottom: 20px;
+}
+
+.skills-and-experience-section .section-title {
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .about-me-section,
+  .skills-and-experience-section {
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .left-align {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App-card {
+    margin-bottom: 20px; /* Reduce margin for smaller screens */
+    padding: 15px;
+  }
+}
+/* General styles for section cards */
+.App-card {
+  
+  background: linear-gradient(to right, #31373d, #3e5063); /* Gradient background */
+  border-radius: 20px; /* Increase rounded corners for smoother look */
+  margin-bottom: 40px; /* Space between sections */
+  padding: 5px; /* Add extra padding for breathing space */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for a more elevated look */
+  transition: all 0.4s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Smooth hover effect */
+.App-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); /* Increase shadow for a hovering effect */
+  transform: translateY(-8px) scale(1.02); /* Slight lift and scale for hover effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.4s ease-in-out; /* Ensure smooth transition */
+}
+
+/* Section header titles */
+.section-title {
+  text-align: center;
+  color: #66fcf1; /* Cyan color for the title */
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* About Me and Experience sections content */
+.about-me-section,
+.skills-and-experience-section {
+  background-color: rgba(255, 255, 255, 0.05); /* Slightly transparent background for inner content */
+  padding: 20px;
+  border-radius: 15px; /* Smoother corners inside */
+}
+
+/* Skill Bar styling */
+.skill-bar-bg {
+  background-color: #0c1620;
+  height: 10px;
+  border-radius: 20px; /* Smooth rounded ends */
+  margin-top: 8px;
+  overflow: hidden; /* Ensures the fill stays within the rounded corners */
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 20px; /* Smooth rounded ends */
+  transition: width 1s ease-out; /* Smooth fill animation */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App-card {
+    margin-bottom: 20px; /* Reduce margin for smaller screens */
+    padding: 15px;
+    border-radius: 20px; /* Slightly reduce corner rounding on small screens */
+  }
+}
+
+
+.section-card {
+  background: linear-gradient(to right, #1a2a3a, #0c1620);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.section-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.skills-container,
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+}
+
+.title-tag {
+  color: #ff6347;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+} 
+
+@media (max-width: 768px) {
+  .section-card {
+    padding: 16px; 
+  }
+}
+
+
