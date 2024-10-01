@@ -1,94 +1,130 @@
+/* App.css */
+/* Global Styles */
+body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  background: linear-gradient(to right, #1a2a3a, #0c1620);
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
 .App {
-  font-family: 'Roboto', sans-serif;
-  transition: background-color 0.5s, color 0.5s;
-  text-align: left;
+  text-align: center;
+  background: linear-gradient(to right, #1a2a3a, #0c1620);
+  min-height: 100vh;
 }
 
-.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', 'Arial', sans-serif;
 }
 
-.light-mode {
-  background-color: #ffffff;
-  color: #000000;
+a {
+  color: #66fcf1;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-/* Add dark mode styling for the drawer */
-.dark-mode .drawer-header {
-  background-color: #333333;
-  color: #ffffff;
+a:hover {
+  color: #45a29e;
 }
 
-.header-content {
+p {
+  color: #e0e0e0;
+}
+
+/* Header Styles */
+.App-header {
+  padding: 20px;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }
 
-.MenuButton {
-  margin-left: auto;
+.nav-buttons {
+  display: flex;
+  align-items: center;
 }
 
-.DarkModeSwitch {
-  margin-right: 10px;
+.nav-buttons button {
+  margin: 0 10px;
+  color: #66fcf1;
+  background: transparent;
+  border: none;
 }
 
-.App-photo-container {
-  text-align: center;
-  margin: 20px 0;
+.nav-buttons .MuiButton-containedSecondary {
+  background-color: #45a29e;
+  color: #0b0c10;
+}
+
+.nav-buttons .MuiButton-containedSecondary:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+}
+
+.nav-buttons .MuiTextField-root {
+  margin-left: 20px;
 }
 
 .App-photo {
-  width: 250px;
-  height: 250px;
   border-radius: 50%;
-  transition: transform 0.3s;
+  width: 200px;
+  height: 200px;
+  margin: a20px auto;
+  box-shadow: 0 0 20px rgba(102, 252, 241, 0.5);
 }
 
-.App-photo:hover {
-  transform: scale(1.1);
-}
-
-.App-header {
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(to bottom, #6dd5ed, #2193b0);
-  color: white;
-}
-
-.App-header h1 {
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-.App-header p {
-  font-size: 1.2rem;
-  margin: 5px 0;
+.logo h1 {
+  color: #66fcf1;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
+  margin: 20px 0;
 }
 
+.MuiIconButton-root {
+  color: #66fcf1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.MuiIconButton-root:hover {
+  color: #45a29e;
+  transform: scale(1.1);
+}
+
+/* Section Styles */
 .App-section {
-  padding-left: 100px;
-  padding-right: 100px;
+  margin: 30px 0;
+  background: linear-gradient(to right, #1a2a3a, #0c1620);
 }
 
 .App-card {
-  margin: 20px 0;
-  transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #c5c6c7;
+  margin: 10px auto;
+  width: 70%;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .App-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.MuiTypography-h4, .MuiTypography-h5 {
+  color: #66fcf1;
 }
 
 .section-content {
@@ -97,155 +133,272 @@
 
 .left-align {
   text-align: left;
+  padding: 15px;
+  color: #ffffff;
 }
 
-.date {
-  float: right;
-  color: #888888;
-}
-
-.drawer-header {
-  text-align: center;
+/* Skill Bar Styles */
+.skills-container {
   padding: 20px;
-  background: #2193b0;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.drawer-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin: 0 auto 10px;
+/* Footer Styles */
+footer {
+  background-color: rgba(11, 12, 16, 0.9);
+  padding: 30px 0;
+  width: 100%;
+  margin-top: 50px;
+  border-top: 1px solid rgba(102, 252, 241, 0.3);
 }
 
-.drawer h6 {
-  margin: 5px 0;
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: #c5c6c7;
+  font-size: 14px;
 }
 
-.drawer p {
-  margin: 5px 0;
-  font-size: 0.9rem;
+.footer-content p {
+  margin: 10px 0;
+  color: #ffffff;
 }
 
-.Projects {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+.footer-content a {
+  color: #66fcf1;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.Project-card {
-  max-width: 300px;
-  margin: 10px;
+.footer-content a:hover {
+  color: #45a29e;
+  text-decoration: underline;
 }
 
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 20px 0;
+  }
+
+  .footer-content {
+    font-size: 12px;
+  }
+}
+
+/* Back to Top Button */
 .back-to-top {
   position: fixed;
   bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
+  right: 20px;
+  z-index: 999;
 }
 
-.back-to-top:hover {
-  color: #0b0c0c; /* Change this to a darker shade of your preferred color */
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-  .App-section {
-    padding-left: 50px;
-    padding-right: 50px;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  
+  .nav-buttons {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-buttons button, .nav-buttons .MuiTextField-root {
+    margin: 5px;
+  }
+  
+  .App-card {
+    width: 90%;
   }
 }
 
-@media (max-width: 992px) {
-  .App-header h1 {
+@media screen and (max-width: 480px) {
+  .logo h1 {
     font-size: 1.8rem;
   }
-
-  .App-header p {
-    font-size: 1rem;
-  }
-
-  .App-section {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
+  
   .App-photo {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
 }
 
-@media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: flex-start;
+/*Social Styles */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.social-icons .MuiIconButton-root {
+  margin: 0 10px;
+  color: #66fcf1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.social-icons .MuiIconButton-root:hover {
+  color: #0b0c10;
+  background-color: #66fcf1;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(102, 252, 241, 0.4);
+}
+
+.social-icons .MuiIconButton-root:focus {
+  outline: none;
+  border-color: #45a29e;
+}
+
+.social-icons .MuiSvgIcon-root {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .social-icons {
+    flex-wrap: wrap;
   }
 
-  .App-header h1 {
-    font-size: 1.5rem;
-  }
-
-  .App-header p {
-    font-size: 0.9rem;
-  }
-
-  .App-section {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .drawer-header {
-    padding: 15px;
-  }
-
-  .drawer-avatar {
-    width: 80px;
-    height: 80px;
-  }
-
-  .back-to-top {
-    bottom: 10px;
+  .social-icons .MuiIconButton-root {
+    margin: 5px;
   }
 }
 
-@media (max-width: 576px) {
-  .App-header h1 {
-    font-size: 1.2rem;
-  }
+/* SkillsExperience.css */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
 
-  .App-header p {
-    font-size: 0.8rem;
-  }
+.section-card {
+  background: rgba(30, 41, 59, 0.7) !important;
+  border: 1px solid rgba(102, 252, 241, 0.1) !important;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-  .App-section {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+.section-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 252, 241, 0.15) !important;
+}
 
-  .drawer-avatar {
-    width: 60px;
-    height: 60px;
-  }
+.section-title {
+  font-family: 'Fira Code', monospace !important;
+  color: #66fcf1 !important;
+  margin-bottom: 1.5rem !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-  .Projects {
-    flex-direction: column;
-    align-items: center;
-  }
+.title-tag {
+  color: #45a29e;
+  opacity: 0.7;
+}
 
-  .Project-card {
-    max-width: 100%;
-  }
+/* Skills Styles */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-  .back-to-top {
-    bottom: 10px;
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.skill-name {
+  font-family: 'Fira Code', monospace !important;
+  color: #c5c6c7 !important;
+  font-size: 0.9rem !important;
+}
+
+.skill-level {
+  font-family: 'Fira Code', monospace;
+  color: #45a29e;
+  font-size: 0.8rem;
+}
+
+.skill-bar-bg {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+/* Experience Styles */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(102, 252, 241, 0.1);
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.exp-title {
+  font-family: 'Fira Code', monospace;
+  color: #66fcf1;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.exp-role {
+  color: #c5c6c7;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.exp-location, .exp-duration {
+  color: #45a29e;
+  font-size: 0.8rem;
+  margin: 0.2rem 0;
+}
+
+.exp-points {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.exp-points li {
+  color: #c5c6c7;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.exp-points li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: #45a29e;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .section-card {
+    margin-bottom: 1rem;
   }
 }
