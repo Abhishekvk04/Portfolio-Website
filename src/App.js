@@ -9,6 +9,7 @@ import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import { motion } from 'framer-motion';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Projects from './Components/Projects';
+import { Analytics } from "@vercel/analytics/react"
 
 // SkillBar Component
 const SkillBar = ({ skill, level, color = '#66fcf1' }) => {
@@ -329,6 +330,7 @@ function App() {
           </div>
         </footer>
       </motion.div>
+      <Analytics/>
     </Router>
   );
 }
